@@ -54,7 +54,8 @@ h2, .form-group > label {
     padding: 40px 30px;
 }
 .form-check {
-    padding: 2px;
+    padding-top: 2px;
+    padding-bottom: 2px;
 }
 input#randomResult {
     padding: 20px 30px;
