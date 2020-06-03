@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Rubik:300,300i,400,400i,500,500i&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+
+<title>Password Generator</title>
+    
+</head>
+<body>
+	
+<main class="container-fluid bg-dark">
+    <div class="d-flex align-items-center h-100">
+        <section class="content">
+            <article class="card">
+	            <h1>Password Generator</h1>
+                <form>
+	                <div class="form-group">
+						<label for="passwordLength">Password Length:</label>
+						<select class="form-control form-control-sm" id="passwordLength"></select>
+					</div>
+					<div class="form-group">
+						<label>Include:</label>
+						<div class="form-check">
+							<input type="checkbox" class="form-check-input" id="includeSymbols">
+							<label class="form-check-label" for="includeSymbols">Lowercase Characters</label>
+						</div>
+						<div class="form-check">
+							<input type="checkbox" class="form-check-input" id="includeSymbols">
+							<label class="form-check-label" for="includeSymbols">Uppercase Characters</label>
+						</div>
+						<div class="form-check">
+							<input type="checkbox" class="form-check-input" id="includeSymbols">
+							<label class="form-check-label" for="includeSymbols">Numbers (e.g. 123456)</label>
+						</div>
+						<div class="form-check">
+							<input type="checkbox" class="form-check-input" id="includeSymbols">
+							<label class="form-check-label" for="includeSymbols">Symbols (e.g. @#$%)</label>
+						</div>
+						<div class="invalid-feedback">You must check at least one of the options.</div>
+					</div>
+				</form>
+				<button type="submit" class="btn btn-primary">Generate My Password</button>
+				
+				<hr>
+				
+				<h2>Your Password Is:</h2>
+				<input type="text" value="Password" id="randomResult">
+            </article>
+        </section>
+    </div>
+</main>
+
+<script type="text/javascript" src="js/main.js"></script>
+
+</body>
+</html>
