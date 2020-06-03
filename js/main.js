@@ -34,8 +34,8 @@ function generatePassword() {
 	
 	var includeLowercase = 'abcdefghijklmnopqrstuvwxyz';
 	var includeUppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-	var includeNumbers = '0123456789';
-	var includeSymbols = '@%+\/!#$?';
+	var includeNumbers = '01234567890123456789';
+	var includeSymbols = '@%+\/!#$?@%+\/!#$?';
 	
 	var includeElements = '';
 	
@@ -63,11 +63,14 @@ function generatePassword() {
 		console.log('Error code goes here');
 		
 	}
+	
+	var passwordLength = document.getElementById('passwordLength');
+	var lengthValue = passwordLength.options[passwordLength.selectedIndex].text;
 
-	for (i = 1; i <= 8; i++) { 
+	for (i = 1; i <= lengthValue; i++) { 
 		
 		var char = Math.floor(Math.random() * includeElements.length + 1); 
-		password += includeElements.charAt(char) 
+		password += includeElements.charAt(char);
 	} 
 	
 	return password; 
