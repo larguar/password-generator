@@ -28,16 +28,16 @@
 					<div class="form-group">
 						<label>Include:</label>
 						<div class="form-check">
-							<input type="checkbox" class="form-check-input" id="includeLowercase">
-							<label class="form-check-label" for="includeLowercase">Lowercase Characters</label>
+							<input type="checkbox" class="form-check-input" id="includeLowercase" checked>
+							<label class="form-check-label" for="includeLowercase">Lowercase (e.g. abcd)</label>
 						</div>
 						<div class="form-check">
 							<input type="checkbox" class="form-check-input" id="includeUppercase">
-							<label class="form-check-label" for="includeUppercase">Uppercase Characters</label>
+							<label class="form-check-label" for="includeUppercase">Uppercase (e.g. ABCD)</label>
 						</div>
 						<div class="form-check">
 							<input type="checkbox" class="form-check-input" id="includeNumbers">
-							<label class="form-check-label" for="includeNumbers">Numbers (e.g. 123456)</label>
+							<label class="form-check-label" for="includeNumbers">Numbers (e.g. 1234)</label>
 						</div>
 						<div class="form-check">
 							<input type="checkbox" class="form-check-input" id="includeSymbols">
@@ -46,12 +46,13 @@
 						<div class="invalid-feedback">You must check at least one of the options.</div>
 					</div>
 				</form>
-				<button type="submit" class="btn btn-primary">Generate My Password</button>
+				<button onclick="readySetGo()" class="btn btn-primary">Generate My Password</button>
+				<p id="geeks"></p> 
 				
 				<hr>
 				
 				<h2>Your Password Is:</h2>
-				<input type="text" value="Password" id="randomResult">
+				<input type="text" value="" id="randomResult">
             </article>
         </section>
     </div>
