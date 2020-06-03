@@ -19,7 +19,9 @@
     <div class="d-flex align-items-center h-100">
         <section class="content">
             <article class="card">
+	            
 	            <h1>Password Generator</h1>
+	            
                 <form>
 	                <div class="form-group">
 						<label for="passwordLength">Password Length:</label>
@@ -47,10 +49,11 @@
 				</form>
 				<button onclick="readySetGo()" class="btn btn-primary">Generate My Password</button>
 				
-				<hr>
+				<div id="result">
+					<h2>Your Password Is:</h2>
+					<input type="text" value="" id="randomResult">
+				</div>
 				
-				<h2>Your Password Is:</h2>
-				<input type="text" value="" id="randomResult">
             </article>
         </section>
     </div>
