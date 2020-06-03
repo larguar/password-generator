@@ -74,8 +74,6 @@ function generatePassword() {
 	var passwordLength = document.getElementById('passwordLength');
 	var lengthValue = passwordLength.options[passwordLength.selectedIndex].text;
 	
-	// For the number of characters the user selected, generate a random assortment of characters based on the character options the user selected
-	
 	// Sets character count to the number the user selected
 	for (i = 1; i <= lengthValue; i++) { 
 		
@@ -83,7 +81,7 @@ function generatePassword() {
 		var char = Math.floor(Math.random() * includeElements.length + 1); 
 		password += includeElements.charAt(char);
 	} 	
-	return password; 
+	return password;
 	
 }
 
