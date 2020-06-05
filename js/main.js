@@ -30,6 +30,12 @@
 // Generate password functionality
 function generatePassword() { 
 	
+	// Pull ID's 
+	var boxLowercase = document.getElementById('includeLowercase');
+	var boxUppercase = document.getElementById('includeUppercase');
+	var boxNumbers = document.getElementById('includeNumbers');
+	var boxSymbols = document.getElementById('includeSymbols');
+	
 	// Start with blank values for password and character options
 	var password = ''; 
 	var includeElements = '';
@@ -41,33 +47,28 @@ function generatePassword() {
 	var includeSymbols = '@%+\/!#$?@%+\/!#$?';
 	
 	// If lowercase box is checked, add lowercase values towards character options
-	if (document.getElementById('includeLowercase').checked === true) {		
+	if (boxLowercase.checked === true) {		
 		var includeElements = includeElements + includeLowercase;		
 	}
 	
 	// If uppercase box is checked, add uppercase values towards character options
-	if (document.getElementById('includeUppercase').checked === true) {		
+	if (boxUppercase.checked === true) {		
 		var includeElements = includeElements + includeUppercase;		
 	}
 	
 	// If numbers box is checked, add numbers values towards character options
-	if (document.getElementById('includeNumbers').checked === true) {		
+	if (boxNumbers.checked === true) {		
 		var includeElements = includeElements + includeNumbers;		
 	}
 	
 	// If symbols box is checked, add symbols values towards character options
-	if (document.getElementById('includeSymbols').checked === true) {		
+	if (boxSymbols.checked === true) {		
 		var includeElements = includeElements + includeSymbols;		
 	}
 	
 	// If none of the boxes are checked, alert the user
-	if (document.getElementById('includeLowercase').checked === false &&
-		document.getElementById('includeUppercase').checked === false && 
-		document.getElementById('includeNumbers').checked === false && 
-		document.getElementById('includeSymbols').checked === false) {
-		
-		alert('You must check at least one of the boxes.');
-		
+	if (boxLowercase.checked === false && boxUppercase.checked === false && boxNumbers.checked === false && boxSymbols.checked === false) {		
+		alert('You must check at least one of the boxes.');		
 	}
 	
 	// Pull the number the user selected for password length
@@ -86,6 +87,6 @@ function generatePassword() {
 }
 
 // Add result to my ID when function takes place (when button is clicked)
-function readySetGo() { 
-	document.getElementById('randomResult').value = generatePassword();
+function readySetGo() { 	
+	document.getElementById('randomResult').value = generatePassword();	
 } 
